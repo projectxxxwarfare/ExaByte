@@ -1290,7 +1290,7 @@ int64 static GetBlockValue(int nHeight, int64 nFees, uint256 prevHash)
     long seed = hex2long(cseed);
     int rand = generateMTRandom(seed, 101);
 
-    if(rand > 0 && rand < 1)
+    if(rand > 0 && rand <= 1)
     {
         nSubsidy *= 100;
     }
